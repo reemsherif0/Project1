@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitleContact">تواصل معنا — المؤسسة المصرية العربية المتحدة</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body id="site">
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="الصفحة الرئيسية">
+                <img src="logo.png" alt="شعار المؤسسة" class="logo" id="logoImg" width="64" height="64">
+                <div class="brand-text">
+                    <span class="name-ar" data-i18n="brandNameAR">المؤسسة المصرية العربية المتحدة</span>
+                    <span class="name-en text-muted-small" data-i18n="brandNameEN">Egyptian Arab United Foundation</span>
+                </div>
+            </a>
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
+                    <li><a href="about.html" data-i18n="about">عنّا</a></li>
+                    <li class="dropdown" id="productsMenu">
+                        <a href="index.html#products" data-i18n="products">منتجاتنا <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Flow.html" data-i18n="product_flow">ملح فلو</a></li>
+                            <li><a href="Ros.html" data-i18n="product_ros">ملح روزابيلا</a></li>
+                            <li><a href="Khal_first.html" data-i18n="product_first">خل فرست</a></li>
+                            <li><a href="Owais.html" data-i18n="product_oweis">خل أويس</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#quality" data-i18n="quality">الجودة</a></li>
+                    <li><a href="contact.html" class="active" data-i18n="contact">تواصل (جملة)</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">☰</button>
+        </div>
+    </header>
+    <main class="contact-page">
+        <section class="section">
+            <div class="container contact-grid">
+                
+                <aside class="contact-side animate-fade" data-anim>
+                    <h3 data-i18n="quickInfoTitle">معلومات سريعة</h3>
+                    <p data-i18n="address">العنوان: شارع أحمد كمال، طنطا، محافظة الغربية</p>
+                    <p data-i18n="phoneLandline">هاتف أرضي: <a href="tel:0403340197">0403340197</a></p>
+                    <p data-i18n="phoneMobile">موبايل: 
+                         <a href="tel:010228752730">010228752730</a> · 
+                        <a href="tel:01220966916">01220966916</a> · 
+                         <a href="tel:01150627549">01150627549</a> ·
+                        <a href="tel:01551846749">01551846749</a>
+                    </p>
+                    <p data-i18n="websiteLink">الموقع: <a href="https://g.co/kgs/UBNLNpj" target="_blank" rel="noreferrer">https://g.co/kgs/UBNLNpj</a></p>
+                    <p data-i18n="facebookLink">فيسبوك: <a href="https://www.facebook.com/profile.php?id=61556167168849&mibextid=ZbWKwL" target="_blank" rel="noreferrer">صفحتنا</a></p>
+                </aside>
+                
+                <div class="form-container">
+                    <div class="form-tabs">
+                        <button class="tab-btn active" data-tab="wholesale" data-i18n="tabWholesale">طلب عرض سعر / جملة</button>
+                        <button class="tab-btn" data-tab="feedback" data-i18n="tabFeedback">شكاوى واستفسارات</button>
+                    </div>
+
+                    <form id="wholesaleForm" class="form active" data-form-type="wholesale" data-anim>
+                        <h2 class="section-heading" data-i18n="formWholesaleTitle">نموذج طلب تجاري / جملة</h2>
+                        
+                        <div class="form-row">
+                            <label for="clientType" data-i18n="labelClientType">نوع العميل</label>
+                            <select id="clientType" required>
+                                <option value="" data-i18n="optionChoose">--- اختر ---</option>
+                                <option value="retailer" data-i18n="optionRetailer">تاجر تجزئة</option>
+                                <option value="distributor" data-i18n="optionDistributor">موزّع / تاجر جملة</option>
+                                <option value="company" data-i18n="optionCompany">شركة / مطبخ صناعي</option>
+                                <option value="other" data-i18n="optionOther">أخرى</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="productSelect" data-i18n="labelProduct">المنتج</label>
+                            <select id="productSelect" required>
+                                <option value="" data-i18n="optionChooseProduct">--- اختر منتج ---</option>
+                                <option value="ملح فلو" data-i18n="product_flow">ملح فلو</option>
+                                <option value="ملح روزابيلا" data-i18n="product_ros">ملح روزابيلا</option>
+                                <option value="خل فرست" data-i18n="product_first">خل فرست</option>
+                                <option value="خل أويس" data-i18n="product_oweis">خل أويس</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <label for="quantity" data-i18n="labelQuantity">الكمية المطلوبة (عدد باكيت / كرتون - الحد الأدنى 10)</label>
+                            <input id="quantity" type="number" min="10" placeholder="مثلاً: 100" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <label for="companyName" data-i18n="labelCompanyName">اسم الشركة / المحل (إن وجد)</label>
+                            <input id="companyName" type="text" placeholder="اسم الشركة أو المحل">
+                        </div>
+                        
+                        <div class="form-row">
+                            <label for="contactName" data-i18n="labelContactName">اسم جهة الاتصال (المُرسِل)</label>
+                            <input id="contactName" type="text" placeholder="اسمك" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <label for="email" data-i18n="labelEmail">البريد الإلكتروني (هام للتواصل الرسمي)</label>
+                            <input id="email" type="email" placeholder="example@domain.com" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <label for="phone" data-i18n="labelPhone">الهاتف</label>
+                            <input id="phone" type="tel" placeholder="010xxxxxxxx" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <label for="notes" data-i18n="labelNotes">ملاحظات إضافية</label>
+                            <textarea id="notes" rows="4" placeholder="مثلاً: موعد استلام / شروط شحن"></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <button type="submit" class="btn primary large ripple" data-i18n="btnSendQuote">ارسل طلب عرض سعر</button>
+                        </div>
+                        
+                        <div id="formAlertWholesale" class="form-alert" role="status" aria-live="polite"></div>
+                    </form>
+
+                    <form id="feedbackForm" class="form hidden" data-form-type="feedback" data-anim>
+                        <h2 class="section-heading" data-i18n="formFeedbackTitle">نموذج شكاوى واستفسارات</h2>
+                        
+                        <div class="form-row">
+                            <label for="feedbackType" data-i18n="labelFeedbackType">نوع الطلب</label>
+                            <select id="feedbackType" required>
+                                <option value="" data-i18n="optionChoose">--- اختر ---</option>
+                                <option value="inquiry" data-i18n="optionInquiry">استفسار عام</option>
+                                <option value="product_inquiry" data-i18n="optionProductInquiry">استفسار عن منتج</option>
+                                <option value="complaint" data-i18n="optionComplaint">شكوى</option>
+                                <option value="suggestion" data-i18n="optionSuggestion">اقتراح</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row product-reference">
+                            <label for="productReference" data-i18n="labelProductReference">المنتج المعني (اختياري)</label>
+                            <select id="productReference">
+                                <option value="" data-i18n="optionChooseProduct">--- اختر منتج ---</option>
+                                <option value="ملح فلو" data-i18n="product_flow">ملح فلو</option>
+                                <option value="ملح روزابيلا" data-i18n="product_ros">ملح روزابيلا</option>
+                                <option value="خل فرست" data-i18n="product_first">خل فرست</option>
+                                <option value="خل أويس" data-i18n="product_oweis">خل أويس</option>
+                                <option value="none" data-i18n="optionNone">غير متعلق بمنتج محدد</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="details" data-i18n="labelDetails">تفاصيل الشكوى / الاستفسار</label>
+                            <textarea id="details" rows="6" placeholder="اذكر التفاصيل بوضوح..." required></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <label for="feedbackName" data-i18n="labelContactName">اسم جهة الاتصال</label>
+                            <input id="feedbackName" type="text" placeholder="اسمك" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="feedbackEmail" data-i18n="labelEmail">البريد الإلكتروني</label>
+                            <input id="feedbackEmail" type="email" placeholder="example@domain.com" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="feedbackPhone" data-i18n="labelPhoneOptional">الهاتف (اختياري)</label>
+                            <input id="feedbackPhone" type="tel" placeholder="010xxxxxxxx">
+                        </div>
+                        
+                        <div class="form-row">
+                            <button type="submit" class="btn outline large ripple" data-i18n="btnSendFeedback">ارسل الشكوى / الاستفسار</button>
+                        </div>
+                        
+                        <div id="formAlertFeedback" class="form-alert" role="status" aria-live="polite"></div>
+                    </form>
+
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="copy" data-i18n="footerCopy">جميع الحقوق محفوظة © <span id="year">2025</span> المؤسسة المصرية العربية المتحدة</div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61556167168849&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96s4.46 9.96 9.96 9.96 9.96-4.46 9.96-9.96-4.46-9.96-9.96-9.96zm1.25 17.5v-7.9h2.64l.4-3.1h-3.04v-2c0-.88.24-1.48 1.5-1.48h1.61v-2.7c-.28-.04-1.24-.12-2.35-.12-2.35 0-3.96 1.43-3.96 4.08v2.24h-2.65v3.1h2.65v7.9h3.31z"/></svg> <span data-i18n="facebook">فيسبوك</span></a> |
+                <a href="https://www.instagram.com/e.a.u.f?igsh=MWF3djgzbzRpN25qOA==" target="_blank" rel="noopener noreferrer" aria-label="إنستجرام"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96s4.46 9.96 9.96 9.96 9.96-4.46 9.96-9.96-4.46-9.96-9.96-9.96zm4.04 1.77c.22 0 .4.18.4.4v2.54c0 .22-.18.4-.4.4h-2.54c-.22 0-.4-.18-.4-.4v-2.54c0-.22.18-.4.4-.4h2.54zm-2.04 4.39c2.31 0 4.19 1.88 4.19 4.19s-1.88 4.19-4.19 4.19-4.19-1.88-4.19-4.19 1.88-4.19 4.19-4.19zm0 1.6c-1.43 0-2.59 1.16-2.59 2.59s1.16 2.59 2.59 2.59 2.59-1.16 2.59-2.59-1.16-2.59-2.59-2.59zm3.84-2.83c0-.12-.08-.2-.2-.2h-2.14c-.12 0-.2.08-.2.2v2.14c0 .12.08.2.2.2h2.14c.12 0 .2-.08.2-.2v-2.14z"/></svg> <span data-i18n="instagram">إنستجرام</span></a> |
+                <a href="https://g.co/kgs/UBNLNpj" aria-label="الموقع الجغرافي"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-4.42 0-8 3.58-8 8 0 4.42 8 14 8 14s8-9.58 8-14c0-4.42-3.58-8-8-8zm0 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg> <span data-i18n="location">الموقع الجغرافي">الموقع الجغرافي</span></a>
+            </div>
+            <button class="back-top ripple" id="backTop" aria-label="العودة لأعلى الصفحة" data-i18n="backTop">↑</button>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
