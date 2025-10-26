@@ -478,3 +478,37 @@ const el = document.querySelector('[data-i18n="address"]');
 if (el && translations && translations.address) {
   el.innerHTML = translations.address; // يعرض HTML داخل النص المترجم
 }
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+const productsMenu = document.getElementById('productsMenu');
+
+if (navToggle && mainNav) {
+    navToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+    });
+}
+
+// Dropdown menu for mobile
+if (productsMenu) {
+    const prodAnchor = productsMenu.querySelector('a');
+    const dropdownMenu = productsMenu.querySelector('.dropdown-menu');
+
+    if (prodAnchor && dropdownMenu) {
+        prodAnchor.addEventListener('click', (e) => {
+            if (window.innerWidth < 768) {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('show');
+            }
+        });
+    }
+}
+
+// Close menu on outside click
+document.addEventListener('click', (e) => {
+    if (!mainNav.contains(e.target) && !navToggle.contains(e.target)) {
+        mainNav.classList.remove('open');
+        const openDropdown = mainNav.querySelector('.dropdown-menu.show');
+        if (openDropdown) openDropdown.classList.remove('show');
+    }
+});
+
